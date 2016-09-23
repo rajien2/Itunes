@@ -23,6 +23,9 @@ function drawSongs(songList) {
 
 container.append(card)
 
+var audio = new Audio('audio_file.mp3');
+audio.play();
+
     })
 }
 

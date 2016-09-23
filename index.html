@@ -3,12 +3,16 @@
 <head>
     <title>Itunes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>My Music Store</h1>
-    <form class="form-inline">
+    <form class="form-inline searchform cf">
         <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
         <div class="form-group">
             <input type="text" class="form-control" id="artist" placeholder="Artist Name" />
@@ -18,9 +22,12 @@
 
 
 
-    <div id='music-container'></div>
-        <script src='itunes-service.js'></script>
+
+    <div id='music-container' class='container'></div>
+
+    <script src='itunes-service.js'></script>
     <script src='app.js'></script>
+    <script src='auto.js'></script>
 
 </body>
 
