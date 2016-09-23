@@ -10,7 +10,7 @@ function getMusic() {
 function drawSongs(songList) {
     console.log(songList);
 
-    var container = $('$music-container')
+    var container = $('#music-container')
     container.html('')
     songList.forEach(function(song) {
 
@@ -18,7 +18,8 @@ function drawSongs(songList) {
     <div>
     <h3>${song.title}</h3>
     <img src='${song.albumArt}'></img>
-    </div>`
+    </div>
+    `
 
 container.append(card)
 
