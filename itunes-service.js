@@ -15,7 +15,8 @@ var itunes = {
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,
-                      preview: song.previewUrl
+                      preview: song.previewUrl,
+                      url: song.url
                     };
                 })
         $('#get-music-button').text('GET MUSIC');

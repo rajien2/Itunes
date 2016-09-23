@@ -12,19 +12,22 @@ function drawSongs(songList) {
 
     var container = $('#music-container')
     container.html('')
-    songList.forEach(function(song) {
+    songList.forEach(function (song) {
 
         var card = `
-    <div>
-    <h3>${song.title}</h3>
-    <img src='${song.albumArt}'></img>
-    </div>
+<div class='col-md-4'>
+    <p class: 'h4 text-center' href='${song.url}'>${song.title}
+        <p>
+            <img src='${song.albumArt}'></img>
+            <div>
+            </div>
+            <audio controls>
+                <source src="${song.preview}" type="audio/mpeg"> Your browser does not support the audio element.
+            </audio>
+</div>
     `
 
-container.append(card)
-
-var audio = new Audio('audio_file.mp3');
-audio.play();
+        container.append(card)
 
     })
 }
