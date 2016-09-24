@@ -25,7 +25,7 @@ console.log(myItem)
 <div class='col-md-6'>
     <p class='h4 text-center' href='${song.url}'>${song.title}</p>
     <p class='h5 text-center' href='${song.url}'>${song.artist}</p>
-            <img onclick=searchTube(${song.title})  class='center-block' src='${song.albumArt}'>
+            <img <img onclick="searchTube('${song.title} ${song.artist}')"  class='center-block' src='${song.albumArt}'>
             <div>
             <audio controls class='center-block'>
                 <source  src="${song.preview}" type="audio/mpeg"> 

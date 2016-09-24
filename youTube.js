@@ -3,6 +3,8 @@ function tplawesome(e, t) { res = e; for (var n = 0; n < t.length; n++) { res = 
 
 function searchTube(item) {
 
+    $('#results').empty()
+
     // get fourm input
     q = item //$('#query').val()
 
@@ -27,10 +29,11 @@ function searchTube(item) {
             //$('results').append(item.id.videoId + ' ' + data.snippet.title + '<br>');
 
 
-            $('#my_popup').popup({
-                opacity: 0.3,
-                transition: 'all 0.3s'
-            });
+$('#my_popup').popup({
+            tooltipanchor: event.target,
+            autoopen: true,
+            type: 'tooltip'
+        });
 
 
         }
