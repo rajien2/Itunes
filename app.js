@@ -7,6 +7,9 @@ function getMusic() {
 
 
 
+
+
+
 function drawSongs(songList) {
     console.log(songList);
 
@@ -15,15 +18,16 @@ function drawSongs(songList) {
     songList.forEach(function (song) {
 
         var card = `
-<div class='col-md-4'>
-    <p class: 'h4 text-center' href='${song.url}'>${song.title}
-        <p>
-            <img src='${song.albumArt}'></img>
+<div class='col-md-6'>
+    <p class='h4 text-center' href='${song.url}'>${song.title}</p>
+    <p class='h5 text-center' href='${song.url}'>${song.artist}</p>
+            <img id='content' class='center-block' src='${song.albumArt}'>
             <div>
-            </div>
-            <audio controls>
-                <source src="${song.preview}" type="audio/mpeg"> Your browser does not support the audio element.
+            <audio controls class='center-block'>
+                <source  src="${song.preview}" type="audio/mpeg"> 
+                Your browser does not support the audio element.
             </audio>
+            </div>
 </div>
     `
 

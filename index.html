@@ -11,26 +11,37 @@
 </head>
 
 <body>
-    <h1>My Music Store</h1>
-    <form class="form-inline searchform cf">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" id="artist" placeholder="Artist Name" />
-            <button type="button" class="btn btn-primary" id="get-music-button" onclick="getMusic()">Get Music</button>
+    <div class="row">
+        <div class='col-md-4 col-md-offset-5' id='search'>
+            <h1>My Music Store</h1>
+            <form class="form-inline searchform cf">
+                <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="artist" placeholder="Artist Name" />
+                    <button type="button" class="btn btn-primary" id="get-music-button" onclick="getMusic()">Get Music</button>
+                </div>
+            </form>
         </div>
+    </div>
+
+    <div class='row'>
+        <div id='music-container' class='container-fluid'></div>
+    </div>
+
+
+    <form action="#">
+        <p><input type="text" id='query' class="form-control"></p>
+        <button type="button" class="btn btn-primary" id="search" onclick="searchTube()"></button>
     </form>
 
-
-
-
-    <div id='music-container' class='container'></div>
+<div id='results'></div>
 
     <script src='itunes-service.js'></script>
     <script src='app.js'></script>
     <script src='auto.js'></script>
+    <script src='https://apis.google.com/js/client.js?onload=init'></script>
+    <script src='youTube.js'></script>
 
 </body>
 
 </html>
-
-
