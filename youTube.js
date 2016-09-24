@@ -1,10 +1,10 @@
-function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
+function tplawesome(e, t) { res = e; for (var n = 0; n < t.length; n++) { res = res.replace(/\{\{(.*?)\}\}/g, function (e, r) { return t[n][r] }) } return res }
 
 
-function searchTube() {
+function searchTube(item) {
 
     // get fourm input
-    q = $('#query').val()
+    q = item //$('#query').val()
 
     //run request on api
     $.get(
@@ -18,15 +18,24 @@ function searchTube() {
         },
         function (data) {
             console.log(data.items);
-            $.each(data.items, function(index, item){
-                $.get('item.html', function(data){
-                $('#results').append(tplawesome(data, [{'title':item.snippet.title, 'videoid':item.id.videoId}] ))
+            $.each(data.items, function (index, item) {
+                $.get('item.html', function (data) {
+                    $('#results').append(tplawesome(data, [{ 'title': item.snippet.title, 'videoid': item.id.videoId }]))
                 })
                 //$('#results').append(item.id.videoId + ' ' + item.snippet.title + '<br>')
             })
             //$('results').append(item.id.videoId + ' ' + data.snippet.title + '<br>');
 
 
+            $('#my_popup').popup({
+                opacity: 0.3,
+                transition: 'all 0.3s'
+            });
+
+
         }
     );
 }
+
+
+//searchTube(test);

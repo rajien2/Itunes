@@ -17,11 +17,13 @@ function drawSongs(songList) {
     container.html('')
     songList.forEach(function (song) {
 
+
+
         var card = `
 <div class='col-md-6'>
     <p class='h4 text-center' href='${song.url}'>${song.title}</p>
     <p class='h5 text-center' href='${song.url}'>${song.artist}</p>
-            <img id='content' class='center-block' src='${song.albumArt}'>
+            <img onclick=searchTube('${song.title}')  class='center-block' src='${song.albumArt}'>
             <div>
             <audio controls class='center-block'>
                 <source  src="${song.preview}" type="audio/mpeg"> 
@@ -32,7 +34,7 @@ function drawSongs(songList) {
     `
 
         container.append(card)
-
+        myInfo = ''
     })
 }
 

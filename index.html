@@ -29,18 +29,31 @@
     </div>
 
 
-    <form action="#">
-        <p><input type="text" id='query' class="form-control"></p>
-        <button type="button" class="btn btn-primary" id="search" onclick="searchTube()"></button>
-    </form>
+<!-- Add an optional button to open the popup -->
+  <button class="my_popup_open">Open popup</button>
+
+  <!-- Add content to the popup -->
+  <div id="my_popup">
 
 <div id='results'></div>
+
+    <button class="my_popup_close">Close</button>
+
+
 
     <script src='itunes-service.js'></script>
     <script src='app.js'></script>
     <script src='auto.js'></script>
     <script src='https://apis.google.com/js/client.js?onload=init'></script>
     <script src='youTube.js'></script>
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $('#my_popup').popup();
+
+    });
+  </script>
 
 </body>
 
