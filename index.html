@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Itunes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class='col-md-4 col-md-offset-5' id='search'>
+            <h1>My Music Store</h1>
+            <form class="form-inline searchform cf">
+                <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="artist" placeholder="Artist Name" />
+                    <button type="button" class="btn btn-primary" id="get-music-button" onclick="getMusic()">Get Music</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div id='music-container' class='container-fluid'></div>
+    </div>
+
+
+<!-- Add an optional button to open the popup -->
+  <button class="my_popup_open">Open popup</button>
+
+  <!-- Add content to the popup -->
+  <div id="my_popup">
+
+<div id='results'></div>
+
+    <button class="my_popup_close">Close</button>
+
+
+
+    <script src='itunes-service.js'></script>
+    <script src='app.js'></script>
+    <script src='auto.js'></script>
+    <script src='https://apis.google.com/js/client.js?onload=init'></script>
+    <script src='youTube.js'></script>
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $('#my_popup').popup();
+
+    });
+  </script>
+
+</body>
+
+</html>
